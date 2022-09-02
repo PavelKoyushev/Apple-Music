@@ -13,9 +13,13 @@
 		E9075EAD28C1D0FA000515E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9075EAB28C1D0FA000515E7 /* Main.storyboard */; };
 		E9075EAF28C1D0FB000515E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9075EAE28C1D0FB000515E7 /* Assets.xcassets */; };
 		E9075EB228C1D0FB000515E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9075EB028C1D0FB000515E7 /* LaunchScreen.storyboard */; };
+		EA75351889C6340D84F8B890 /* libPods-Apple Music.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7B6EBF43F95E22AF6A36ED /* libPods-Apple Music.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB7B6EBF43F95E22AF6A36ED /* libPods-Apple Music.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Apple Music.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC640DFA55EA2B2A5D850F2A /* Pods-Apple Music.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apple Music.release.xcconfig"; path = "Target Support Files/Pods-Apple Music/Pods-Apple Music.release.xcconfig"; sourceTree = "<group>"; };
+		BCD25EF2B0A2E4F3B9FA6B6C /* Pods-Apple Music.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apple Music.debug.xcconfig"; path = "Target Support Files/Pods-Apple Music/Pods-Apple Music.debug.xcconfig"; sourceTree = "<group>"; };
 		E9075EA228C1D0FA000515E7 /* Apple Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9075EA528C1D0FA000515E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9075EA728C1D0FA000515E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA75351889C6340D84F8B890 /* libPods-Apple Music.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3196C0F20C22F6B21431519C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB7B6EBF43F95E22AF6A36ED /* libPods-Apple Music.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E9075E9928C1D0FA000515E7 = {
 			isa = PBXGroup;
 			children = (
 				E9075EA428C1D0FA000515E7 /* Apple Music */,
 				E9075EA328C1D0FA000515E7 /* Products */,
+				E961029E6CDAEC777BA357FE /* Pods */,
+				3196C0F20C22F6B21431519C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,15 @@
 			path = "Apple Music";
 			sourceTree = "<group>";
 		};
+		E961029E6CDAEC777BA357FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCD25EF2B0A2E4F3B9FA6B6C /* Pods-Apple Music.debug.xcconfig */,
+				BC640DFA55EA2B2A5D850F2A /* Pods-Apple Music.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9075EB628C1D0FB000515E7 /* Build configuration list for PBXNativeTarget "Apple Music" */;
 			buildPhases = (
+				4B8F8736AE94E908CD977897 /* [CP] Check Pods Manifest.lock */,
 				E9075E9E28C1D0FA000515E7 /* Sources */,
 				E9075E9F28C1D0FA000515E7 /* Frameworks */,
 				E9075EA028C1D0FA000515E7 /* Resources */,
@@ -132,6 +157,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B8F8736AE94E908CD977897 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Apple Music-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E9075E9E28C1D0FA000515E7 /* Sources */ = {
@@ -216,7 +266,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,6 +332,7 @@
 		};
 		E9075EB728C1D0FB000515E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCD25EF2B0A2E4F3B9FA6B6C /* Pods-Apple Music.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +361,7 @@
 		};
 		E9075EB828C1D0FB000515E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC640DFA55EA2B2A5D850F2A /* Pods-Apple Music.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
