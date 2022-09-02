@@ -12,6 +12,8 @@
 		E9075EB228C1D0FB000515E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9075EB028C1D0FB000515E7 /* LaunchScreen.storyboard */; };
 		E953257628C1EDB800842E4F /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953257528C1EDB800842E4F /* OnboardingViewModel.swift */; };
 		E953257828C1EE7200842E4F /* OnboardingViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953257728C1EE7200842E4F /* OnboardingViewModelProtocols.swift */; };
+		E953257A28C1FDB700842E4F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E953257928C1FDB700842E4F /* Localizable.strings */; };
+		E953257D28C2004C00842E4F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953257C28C2004C00842E4F /* R.generated.swift */; };
 		E9E46B1A28C1D78C0046A423 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E46B1928C1D78C0046A423 /* OnboardingViewController.swift */; };
 		E9E46B1C28C1DE2F0046A423 /* AppStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E46B1B28C1DE2F0046A423 /* AppStep.swift */; };
 		E9E46B1E28C1DE5E0046A423 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E46B1D28C1DE5E0046A423 /* AppFlow.swift */; };
@@ -30,6 +32,8 @@
 		E9075EB328C1D0FB000515E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E953257528C1EDB800842E4F /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		E953257728C1EE7200842E4F /* OnboardingViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModelProtocols.swift; sourceTree = "<group>"; };
+		E953257928C1FDB700842E4F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E953257C28C2004C00842E4F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		E9E46B1928C1D78C0046A423 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E9E46B1B28C1DE2F0046A423 /* AppStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
 		E9E46B1D28C1DE5E0046A423 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 		E9075EA428C1D0FA000515E7 /* Apple Music */ = {
 			isa = PBXGroup;
 			children = (
+				E953257C28C2004C00842E4F /* R.generated.swift */,
 				E9E46B1728C1D6730046A423 /* App */,
 				E9E46B2128C1E8A20046A423 /* Resources */,
 				E9E46B1528C1D65F0046A423 /* Helpers */,
@@ -184,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				E9075EAE28C1D0FB000515E7 /* Assets.xcassets */,
+				E953257928C1FDB700842E4F /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -196,6 +202,7 @@
 			buildConfigurationList = E9075EB628C1D0FB000515E7 /* Build configuration list for PBXNativeTarget "Apple Music" */;
 			buildPhases = (
 				4B8F8736AE94E908CD977897 /* [CP] Check Pods Manifest.lock */,
+				E953257B28C1FE9400842E4F /* R.Swift */,
 				E9075E9E28C1D0FA000515E7 /* Sources */,
 				E9075E9F28C1D0FA000515E7 /* Frameworks */,
 				E9075EA028C1D0FA000515E7 /* Resources */,
@@ -248,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9075EB228C1D0FB000515E7 /* LaunchScreen.storyboard in Resources */,
+				E953257A28C1FDB700842E4F /* Localizable.strings in Resources */,
 				E9075EAF28C1D0FB000515E7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +285,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E953257B28C1FE9400842E4F /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.Swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -287,6 +315,7 @@
 				E9E46B2028C1DE940046A423 /* OnboardingFlow.swift in Sources */,
 				E953257628C1EDB800842E4F /* OnboardingViewModel.swift in Sources */,
 				E9E46B1C28C1DE2F0046A423 /* AppStep.swift in Sources */,
+				E953257D28C2004C00842E4F /* R.generated.swift in Sources */,
 				E9075EA628C1D0FA000515E7 /* AppDelegate.swift in Sources */,
 				E953257828C1EE7200842E4F /* OnboardingViewModelProtocols.swift in Sources */,
 				E9E46B1E28C1DE5E0046A423 /* AppFlow.swift in Sources */,

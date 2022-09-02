@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Apple Music
+
+  Created by Pavel Koyushev on 02.09.2022.
+  
+*/
+
+// MARK: - Onboarding
+"start" = "Начать";
+
+// MARK: - Search
+"search" = "Поиск";
