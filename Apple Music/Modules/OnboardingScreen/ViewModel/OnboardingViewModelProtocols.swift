@@ -6,18 +6,17 @@
 //
 
 import Foundation
-
 import RxCocoa
 import RxSwift
 
 protocol OnboardingViewModelInputProtocol {
     
-    var onAppear: Observable<Void> { get }
-    var startTap: Observable<Void> { get }
+    var nextTap: Observable<Void> { get }
 }
 
 protocol OnboardingViewModelOutputProtocol {
     
+    var items: Driver<[OnboardingCellModel]> { get }
 }
 
 protocol OnboardingViewModelProtocol {

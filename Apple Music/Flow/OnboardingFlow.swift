@@ -19,8 +19,10 @@ final class OnboardingFlow: Flow {
         return viewController
     }()
     
+    private let searchFlow: SearchFlow
+    
     init() {
-        
+        self.searchFlow = SearchFlow()
     }
     
     deinit {
@@ -33,14 +35,11 @@ final class OnboardingFlow: Flow {
         switch step {
         case .onboarding:
             return navigationToOnboardingScreen()
+        case .dashboard:
+            return .end(forwardToParentFlowWithStep: AppStep.onboardingIsComplete)
         default:
             return .none
         }
-    }
-    
-    private func back() -> FlowContributors {
-        self.rootViewController.popViewController(animated: true)
-        return .none
     }
     
     private func navigationToOnboardingScreen() -> FlowContributors {

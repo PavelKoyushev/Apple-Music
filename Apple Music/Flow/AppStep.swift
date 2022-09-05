@@ -10,5 +10,7 @@ import RxFlow
 
 enum AppStep: Step {
     case onboarding
+    case onboardingIsComplete
+    case dashboard
     case search
 }

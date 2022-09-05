@@ -7,7 +7,12 @@
 */
 
 // MARK: - Onboarding
-"start" = "Начать";
+"start" = "Get Started";
+"next" = "Next";
+
+"appleMusic" = "Apple Music";
+"seaOfMusic" = "Sea of Music";
+"findSongs" = "Find the songs of your favorite artist";
 
 // MARK: - Search
-"search" = "Поиск";
+"search" = "Search";

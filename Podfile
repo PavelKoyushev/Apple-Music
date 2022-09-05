@@ -8,6 +8,7 @@ target 'Apple Music' do
   pod 'Then', '3.0.0'
   pod 'Moya/RxSwift', '14.0.0'
   pod 'Kingfisher', '7.3.2'
+  pod 'SnapKit', '~> 5.6.0'
   
 #RX
 
